@@ -102,7 +102,7 @@ async def download_video(v_url):
     c_time = time.time()
     if song:
         await rkp.edit(
-            f"`Preparing to upload song `\
+            f"`Preparing to upload song... 😉 `\
         \n**{rip_data['title']}**\
         \nby *{rip_data['uploader']}*"
         )
@@ -118,14 +118,14 @@ async def download_video(v_url):
                 )
             ],
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, v_url, c_time, "Uploading..", f"{rip_data['title']}.mp3")
+                progress(d, t, v_url, c_time, "Uploading... From @GangOfMafiaTeam", f"{rip_data['title']}.mp3")
             ),
         )
         os.remove(f"{rip_data['id']}.mp3")
         await v_url.delete()
     elif video:
         await rkp.edit(
-            f"`Preparing to upload video song :`\
+            f"`Preparing to upload video song... 😉`\
         \n**{rip_data['title']}**\
         \nby *{rip_data['uploader']}*"
         )
@@ -133,9 +133,9 @@ async def download_video(v_url):
             v_url.chat_id,
             f"{rip_data['id']}.mp4",
             supports_streaming=True,
-            caption=rip_data["title"],
+            caption=rip_data["title"],"[From](t.me/GangOfMafiaTeam)",
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, v_url, c_time, "Uploading..", f"{rip_data['title']}.mp4")
+                progress(d, t, v_url, c_time, "Uploading... From @GangOfMafiaTeam", f"{rip_data['title']}.mp4")
             ),
         )
         os.remove(f"{rip_data['id']}.mp4")
