@@ -136,7 +136,7 @@ async def download_video(v_url):
             caption=rip_data["title"],
             @GangOfMafiaTeam
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, v_url, c_time, "Uploading... From @GangOfMafiaTeam", f"{rip_data['title']}.mp4")
+                progress(d, t, v_url, c_time, "Uploading... From @GangOfMafiaTeam", f"{rip_data['title'\n From @GangOfMafiateam.mp4]}")
             ),
         )
         os.remove(f"{rip_data['id']}.mp4")
