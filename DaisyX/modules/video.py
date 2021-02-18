@@ -126,8 +126,10 @@ async def download_video(v_url):
     elif video:
         await rkp.edit(
             f"`Preparing to upload video song... 😉`\
-        \n{rip_data['title']}\n
-          @GangOfMafiaTeam"
+        \n{rip_data['title']} 
+          
+            
+            @GangOfMafiaTeam"
         )
         await v_url.client.send_file(
             v_url.chat_id,
